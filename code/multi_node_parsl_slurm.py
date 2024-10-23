@@ -50,6 +50,7 @@ def create_fibonacci_tasks(N):
 
 
 if __name__ == "__main__":
+    os.system("echo $(uname -a) >> tmp.log2")
     slurmConfig = Config(
         executors=[
             HighThroughputExecutor(
@@ -62,7 +63,7 @@ if __name__ == "__main__":
                     # account=None, # 默认不处理
                     # qoe # 默认不处理
                     # channel # 默认不处理
-                    nodes_per_block=2, # -N 1
+                    nodes_per_block=1, # -N 1
                     cores_per_node=4, # -n 4
                     # mem_per_node 
                     # init_blocks=1, 
